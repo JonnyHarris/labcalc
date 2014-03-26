@@ -12,7 +12,7 @@ describe("My Calculator", function() {
         expect(function () { calc.subtract("hello", "") }).toThrow(new Error("Not a number"))
     })
     it("Multiply should calculate 1 * 2 = 2", function () {
-        expect(calc.multiply(1, 1)).toBe(2);
+        expect(calc.multiply(1, 2)).toBe(2);
     })
     it("Multiply should be able to deal with strings and return Not a number", function () {
         expect(function () { calc.multiply("hello", "") }).toThrow(new Error("Not a number"))

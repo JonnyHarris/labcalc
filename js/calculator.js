@@ -19,7 +19,7 @@ var calc = (function () {
             var secondop = parseInt(numb2);
 
             if (isNaN(firstop) == true) {
-                throw new Error("Not a  number");
+                throw new Error("Not a number");
             }
             answer = firstop * secondop;
             return answer;
