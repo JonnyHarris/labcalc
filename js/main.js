@@ -11,26 +11,54 @@ window._skel_config = {
     }
 };
 
-$(document).ready(function() {
-    $("#convertbutton").click(function() {
-        var metricValue = $("#metricinput").val();
-        var imperialValue = $("#imperialinput").val();
 
+$(document).ready(function () {
 
-        if (((metricValue.length !=0) && (imperialValue.length !=0))
-            || ((metricValue.length == 0) && imperialValue.length == 0)) {
-            alert("Please set one field to convert")
+    $("#add").click(function () {
+        var nooneValue = $("#noone").val();
+        var notwoValue = $("#notwo").val();
+
+        if ((nooneValue.length == 0) || (notwoValue.length == 0))
+        {
+            alert("Please enter two numbers");
         }
-        if (metricValue.length != 0) {
-            $("#imperialinput").val(Converter.convertFromPoundsToKIlo(metricValue));
-        }
-        else if (imperialValue.length != 0) {
-            $("#metricinput").val(Converter.convertFromMetricToImperial(imperialValue));
-        }
+
+        $("#answer").val(calc.add(nooneValue, notwoValue));
+
     });
-    $("#clearbutton").click(function() {
-        $("#imperialinput").val('');
-        $("#metricinput").val('');
+    $("#divide").click(function () {
+        var nooneValue = $("#noone").val();
+        var notwoValue = $("#notwo").val();
+        if ((nooneValue.length == 0) || (notwoValue.length == 0)) {
+            alert("Please enter two numbers");
+        }
+        $("#answer").val(calc.divide(nooneValue, notwoValue));
+
+    });
+    $("#multiply").click(function () {
+        var nooneValue = $("#noone").val();
+        var notwoValue = $("#notwo").val();
+        if ((nooneValue.length == 0) || (notwoValue.length == 0)) {
+            alert("Please enter two numbers");
+        }
+        $("#answer").val(calc.multiply(nooneValue, notwoValue));
+
+    });
+    $("#subtract").click(function () {
+        var nooneValue = $("#noone").val();
+        var notwoValue = $("#notwo").val();
+        if ((nooneValue.length == 0) || (notwoValue.length == 0)) {
+            alert("Please enter two numbers");
+        }
+        $("#answer").val(calc.subtract(nooneValue, notwoValue));
+
     });
 
+ 
+    $("#clearbutton").click(function () {
+        $("#noone").val("");
+        $("#notwo").val("");
+        $("#answer").val("");
+
+    });
 });
