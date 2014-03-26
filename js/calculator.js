@@ -8,7 +8,7 @@ var calc = (function () {
             var secondop = parseInt(numb2);
 
             if (isNaN(firstop) == true) {
-                throw new Error("Notanumber");
+                throw new Error("Not a number");
             }
             answer = firstop + secondop;
             return answer;
@@ -30,7 +30,7 @@ var calc = (function () {
             var secondop = parseInt(numb2);
 
             if (isNaN(firstop) == true) {
-                throw new Error("Notanumber");
+                throw new Error("Not a number");
             }
             answer = firstop / secondop;
             return answer;
@@ -40,7 +40,7 @@ var calc = (function () {
             var secondop = parseInt(numb2);
 
             if (isNaN(firstop) == true) {
-                throw new Error("Notanumber");
+                throw new Error("Not a number");
             }
             answer = firstop - secondop;
             return answer;
